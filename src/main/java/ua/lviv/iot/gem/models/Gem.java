@@ -9,8 +9,14 @@ public class Gem extends NecklaceStone {
     public Gem() {
     }
 
-    public Gem(final TransparencyLevel transparency, final String minePlace, final double price,
-               final double caratsWeight, final String name, final CleavageLevel cleavageLevel) {
+    public Gem(final CleavageLevel cleavageLevel) {
+        this.cleavage = cleavageLevel;
+    }
+
+    public Gem(final TransparencyLevel transparency, final String minePlace,
+               final double price,
+               final double caratsWeight, final String name,
+               final CleavageLevel cleavageLevel) {
         super(transparency, minePlace, price, caratsWeight, name);
         this.cleavage = cleavageLevel;
     }

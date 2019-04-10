@@ -12,21 +12,23 @@ public class NecklaceStone {
     public NecklaceStone() {
     }
 
-    public NecklaceStone(final TransparencyLevel transparencyLevel, final String minePlace,
-                         final double NecklaceStonePrice, final double carats, final String NecklaceStoneName) {
+    public NecklaceStone(final TransparencyLevel transparencyLevel,
+                         final String minePlace,
+                         final double necklaceStonePrice, final double carats,
+                         final String necklaceStoneName) {
         this.transparency = transparencyLevel;
         this.country = minePlace;
-        this.price = NecklaceStonePrice;
+        this.price = necklaceStonePrice;
         this.caratsWeight = carats;
-        this.name = NecklaceStoneName;
+        this.name = necklaceStoneName;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(final String NecklaceStoneName) {
-        this.name = NecklaceStoneName;
+    public void setName(final String necklaceStoneName) {
+        this.name = necklaceStoneName;
     }
 
     public TransparencyLevel getTransparency() {
@@ -49,8 +51,8 @@ public class NecklaceStone {
         return price;
     }
 
-    public void setPrice(final double NecklaceStonePrice) {
-        this.price = NecklaceStonePrice;
+    public void setPrice(final double necklaceStonePrice) {
+        this.price = necklaceStonePrice;
     }
 
     public double getCaratsWeight() {
@@ -68,6 +70,7 @@ public class NecklaceStone {
                 + "transparency = " + this.getTransparency() + "\n"
                 + "country = " + this.getCountry() + "\n"
                 + "price = " + this.getPrice() + "\n"
-                + "weight in carats = " + this.getCaratsWeight() + "\n" + "\n\n";
+                + "weight in carats = " + this.getCaratsWeight() + "\n"
+                + "\n\n";
     }
 }

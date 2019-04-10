@@ -9,8 +9,14 @@ public class SemiPreciousStone extends NecklaceStone {
     public SemiPreciousStone() {
     }
 
-    public SemiPreciousStone(final TransparencyLevel transparency, final String minePlace, final double price,
-                             final double caratsWeight, final String name, final Origin origin) {
+    public SemiPreciousStone(final Origin origin) {
+        this.type = origin;
+    }
+
+    public SemiPreciousStone(final TransparencyLevel transparency,
+                             final String minePlace, final double price,
+                             final double caratsWeight, final String name,
+                             final Origin origin) {
         super(transparency, minePlace, price, caratsWeight, name);
         this.type = origin;
     }
