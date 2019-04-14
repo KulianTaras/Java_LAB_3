@@ -32,5 +32,15 @@ public class Main {
                 TransparencyLevel.MIDDLE.getValue(),
                 TransparencyLevel.HIGH.getValue()));
         System.out.println(manager1.sortStonesByWeight(SortOrder.ASD));
+
+
+        Thread t1 = new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+
+            }
+        });
     }
+
 }
