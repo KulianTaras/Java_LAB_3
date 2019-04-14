@@ -30,33 +30,28 @@ public class JewelerManager {
 
     public List<NecklaceStone> sortStonesByWeight(final SortOrder sortOrder) {
         if (sortOrder == SortOrder.ASD) {
-            return necklaceStoneList.stream().sorted(Comparator.
-                    comparingDouble(NecklaceStone::getCaratsWeight))
+            return necklaceStoneList.stream().sorted(Comparator.comparingDouble(NecklaceStone::getCaratsWeight))
                     .collect(Collectors.toList());
 
         } else {
-            return necklaceStoneList.stream().sorted(Comparator.
-                    comparingDouble(NecklaceStone::getCaratsWeight)
+            return necklaceStoneList.stream().sorted(Comparator.comparingDouble(NecklaceStone::getCaratsWeight)
                     .reversed()).collect(Collectors.toList());
         }
     }
 
     public List<NecklaceStone> sortStonesByPrice(final SortOrder sortOrder) {
         if (sortOrder == SortOrder.ASD) {
-            return necklaceStoneList.stream().sorted(Comparator.
-                    comparingDouble(NecklaceStone::getPrice))
+            return necklaceStoneList.stream().sorted(Comparator.comparingDouble(NecklaceStone::getPrice))
                     .collect(Collectors.toList());
 
         } else {
-            return necklaceStoneList.stream().sorted(Comparator.
-                    comparingDouble(NecklaceStone::getPrice)
+            return necklaceStoneList.stream().sorted(Comparator.comparingDouble(NecklaceStone::getPrice)
                     .reversed()).collect(Collectors.toList());
         }
     }
 
 
-    public List<NecklaceStone> findNecklaceStonesByTransparency(
-            final int from, final int to) {
+    public List<NecklaceStone> findNecklaceStonesByTransparency(final int from, final int to) {
         return necklaceStoneList.stream().filter(necklaceStone -> {
             int level = necklaceStone.getTransparency().getValue();
             if ((level >= from) && (level <= to)) {
