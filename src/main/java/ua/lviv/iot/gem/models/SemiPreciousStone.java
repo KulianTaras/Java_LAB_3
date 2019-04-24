@@ -9,8 +9,10 @@ public class SemiPreciousStone extends NecklaceStone {
     public SemiPreciousStone() {
     }
 
-    public SemiPreciousStone(final TransparencyLevel transparency, final String minePlace, final double price,
-                             final double caratsWeight, final String name, final Origin origin) {
+    public SemiPreciousStone(final TransparencyLevel transparency,
+                             final String minePlace, final double price,
+                             final double caratsWeight, final String name,
+                             final Origin origin) {
         super(transparency, minePlace, price, caratsWeight, name);
         this.type = origin;
     }
@@ -21,6 +23,17 @@ public class SemiPreciousStone extends NecklaceStone {
 
     public void setType(final Origin origin) {
         this.type = origin;
+    }
+
+
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", Type of origin";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + ", " + this.getType();
     }
 
     @Override

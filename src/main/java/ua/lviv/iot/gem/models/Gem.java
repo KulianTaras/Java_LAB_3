@@ -9,8 +9,10 @@ public class Gem extends NecklaceStone {
     public Gem() {
     }
 
-    public Gem(final TransparencyLevel transparency, final String minePlace, final double price,
-               final double caratsWeight, final String name, final CleavageLevel cleavageLevel) {
+    public Gem(final TransparencyLevel transparency, final String minePlace,
+               final double price,
+               final double caratsWeight, final String name,
+               final CleavageLevel cleavageLevel) {
         super(transparency, minePlace, price, caratsWeight, name);
         this.cleavage = cleavageLevel;
     }
@@ -21,6 +23,15 @@ public class Gem extends NecklaceStone {
 
     public void setCleavage(final CleavageLevel cleavageLevel) {
         this.cleavage = cleavageLevel;
+    }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", Cleavage";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + ", " + this.getCleavage();
     }
 
     @Override
