@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import ua.lviv.iot.gem.enums.TransparencyLevel;
 import ua.lviv.iot.gem.models.NecklaceStone;
 import ua.lviv.iot.gem.repositories.NecklaceStoneRepository;
 
@@ -18,7 +19,12 @@ public class MainController {
 
     @GetMapping(path = "/add")
     public @ResponseBody String addNewNecklaceStone(@RequestParam String name,
-                                                    @RequestParam double price) {
+                                                    @RequestParam double price
+                                                    //@RequestParam TransparencyLevel transparencyLevel,
+
+                                                    //@RequestParam String country,
+                                                    //@RequestParam double caratsWeight) {
+                                                                                            ){
 
         NecklaceStone stone = new NecklaceStone();
         stone.setName(name);
