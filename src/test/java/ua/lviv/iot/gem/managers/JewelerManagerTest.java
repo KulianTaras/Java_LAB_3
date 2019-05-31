@@ -105,7 +105,7 @@ public class JewelerManagerTest {
     }
     @Test
     public void toStringNecklaceStoneTest() {
-        String testString = "NecklaceStone:\n" +
+        String testString = "NecklaceStoneRepository:\n" +
                 "name = Hanngam\n" +
                 "transparency = MIDDLE\n" +
                 "country = Ukraine\n" +
@@ -115,7 +115,7 @@ public class JewelerManagerTest {
     }
     @Test
     public void toStringGemTest() {
-        String testString = "NecklaceStone -> Gem:\n" +
+        String testString = "NecklaceStoneRepository -> Gem:\n" +
                 "name = Hanggam\n" +
                 "transparency = ZERO\n" +
                 "country = Ukraine\n" +
@@ -127,7 +127,7 @@ public class JewelerManagerTest {
     }
     @Test
     public void toStringSemiPreciousStoneTest() {
-        String testString = "NecklaceStone -> SemiPreciousStone:\n" +
+        String testString = "NecklaceStoneRepository -> SemiPreciousStone:\n" +
                 "name = Hanngam\n" +
                 "transparency = HIGH\n" +
                 "country = Ukraine\n" +

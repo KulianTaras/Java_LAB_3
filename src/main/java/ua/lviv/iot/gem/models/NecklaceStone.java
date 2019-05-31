@@ -2,7 +2,19 @@ package ua.lviv.iot.gem.models;
 
 import ua.lviv.iot.gem.enums.TransparencyLevel;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+@Entity
 public class NecklaceStone {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
     private TransparencyLevel transparency;
     private String country;
     private double price;
@@ -77,7 +89,7 @@ public class NecklaceStone {
 
     @Override
     public String toString() {
-        return "NecklaceStone:\n"
+        return "NecklaceStoneRepository:\n"
                 + "name = " + this.getName() + "\n"
                 + "transparency = " + this.getTransparency() + "\n"
                 + "country = " + this.getCountry() + "\n"

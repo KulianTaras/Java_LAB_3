@@ -36,7 +36,7 @@ public class Gem extends NecklaceStone {
 
     @Override
     public String toString() {
-        return "NecklaceStone -> Gem:\n"
+        return "NecklaceStoneRepository -> Gem:\n"
                 + "name = " + this.getName() + "\n"
                 + "transparency = " + this.getTransparency() + "\n"
                 + "country = " + this.getCountry() + "\n"

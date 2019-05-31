@@ -38,7 +38,7 @@ public class SemiPreciousStone extends NecklaceStone {
 
     @Override
     public String toString() {
-        return "NecklaceStone -> SemiPreciousStone:\n"
+        return "NecklaceStoneRepository -> SemiPreciousStone:\n"
                 + "name = " + this.getName() + "\n"
                 + "transparency = " + this.getTransparency() + "\n"
                 + "country = " + this.getCountry() + "\n"
