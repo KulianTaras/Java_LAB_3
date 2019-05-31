@@ -2,23 +2,23 @@ package ua.lviv.iot.gem.models;
 
 import ua.lviv.iot.gem.enums.TransparencyLevel;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Entity
 public class NecklaceStone {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private @Id @GeneratedValue Integer id;
 
     private TransparencyLevel transparency;
     private String country;
     private double price;
     private double caratsWeight;
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     private String name;
 
     public NecklaceStone() {
